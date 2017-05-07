@@ -3,7 +3,7 @@ English-Spanish Translator using Sequence-to-Sequence Models
 
 Authors
 -------
-This repository is being developed as part of the course  Speech and Speaker Recognition ([DT2119](https://www.kth.se/social/course/DT2119/) / [VT171](https://kth.instructure.com/courses/1730))] at [KTH Royal Institute of Technology](http://kth.se), in the Spring 17 P4 round.
+This repository is being developed as part of the course  Speech and Speaker Recognition ([DT2119](https://www.kth.se/social/course/DT2119/) / [VT171](https://kth.instructure.com/courses/1730)) at [KTH Royal Institute of Technology](http://kth.se), in the Spring 17 P4 round.
 
 | Author               | GitHub                                            |
 |:---------------------|:--------------------------------------------------|
