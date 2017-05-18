@@ -10,7 +10,7 @@ ref_path= os.path.join(os.getcwd(),'ref.txt')
 output_path = os.path.join(os.getcwd(),'output.txt')
 # Regular expressions used to tokenize.
 _WORD_SPLIT = re.compile(b"([.,!?\"':;)(])")
-TOKENIZER = 1
+TOKENIZER = 0
 
 
 
@@ -46,25 +46,40 @@ if __name__ == "__main__":
         output_aux = open('output', 'w')
         output_path = os.path.join(os.getcwd(), 'output')
 
+        c = 0
+        r = 0
         for i in range(len(ref_content)):
             ref_seq = basic_tokenizer(ref_content[i])   # Change by the desired tokenizer
             out_seq = basic_tokenizer(out_content[i])
 
-            ref_aux.write(' '.join(ref_seq))
+            sentence = ' '.join(ref_seq)
+            r = r + len(sentence)
+            ref_aux.write(sentence)
             ref_aux.write('\n')
-            output_aux.write(' '.join(out_seq))
+
+            sentence = ' '.join(out_seq)
+            c = c + len(sentence)
+            output_aux.write(sentence)
             output_aux.write('\n')
 
         ref_aux.close()
         output_aux.close()
 
     # Apply BLEU score
-    command = './multi-bleu.perl ' + str(ref_path) + ' < ' + str(output_path)
-    text = subprocess.check_output(command, shell=True)
+    command = './multi-bleu.perl -lc' + str(ref_path) + ' < ' + str(output_path)    # -lc = lower case
+    text = subprocess.check_output(command, shell=True)     # Example: BLEU = 75.0/66.1/54.7/45.0 (BP=1.000, ratio=1.000, hyp_len=16, ref_len=16)
 
-    scores = text.split()
-    scores = scores[2].split('/')
-    final_score = np.mean(map(float, scores))
+    sp = text.split()
+    scores = sp[2].split('/')
+    penalty = sp[3].split('=')[1]
+    penalty = float(penalty[0:len(penalty)-1])
+
+    N = len(scores)
+    glob_precision = map(float, scores)
+    geom_avg = sum(1./N * np.log(glob_precision))
+
+    final_score = penalty * np.exp(geom_avg)
+    print final_score
 
 
 
