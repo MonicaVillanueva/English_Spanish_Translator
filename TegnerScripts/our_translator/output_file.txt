@@ -1,0 +1,28 @@
+Preparing WMT data in ../data
+Creating 4 layers of 512 units.
+Created model with fresh parameters.
+Reading development and training data (limit: 0).
+  reading data line 100000
+  reading data line 200000
+  reading data line 300000
+  reading data line 400000
+  reading data line 500000
+  reading data line 600000
+  reading data line 700000
+  reading data line 800000
+  reading data line 900000
+  reading data line 1000000
+  reading data line 1100000
+  reading data line 1200000
+  reading data line 1300000
+  reading data line 1400000
+  reading data line 1500000
+  reading data line 1600000
+  reading data line 1700000
+  reading data line 1800000
+  reading data line 1900000
+global step 1000 learning rate 0.5000 step-time 1.58 perplexity 436.76
+  eval: bucket 0 perplexity 51.32
+  eval: bucket 1 perplexity 68.58
+  eval: bucket 2 perplexity 135.32
+  eval: bucket 3 perplexity 155.59

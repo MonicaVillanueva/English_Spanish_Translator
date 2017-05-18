@@ -1,0 +1,21 @@
+global step 500 learning rate 0.5000 step-time 0.41 perplexity 600.10 
+  eval: bucket 0 perplexity 595.81 
+  eval: bucket 1 perplexity 344.79 
+  eval: bucket 2 perplexity 344.24 
+  eval: bucket 3 perplexity 306.13 
+global step 1000 learning rate 0.5000 step-time 0.39 perplexity 202.17 
+  eval: bucket 0 perplexity 32.19 
+  eval: bucket 1 perplexity 73.67 
+  eval: bucket 2 perplexity 149.82 
+  eval: bucket 3 perplexity 176.62 
+global step 1500 learning rate 0.5000 step-time 0.40 perplexity 148.96 
+  eval: bucket 0 perplexity 39.25 
+  eval: bucket 1 perplexity 58.03 
+  eval: bucket 2 perplexity 132.38 
+  eval: bucket 3 perplexity 159.26 
+global step 2000 learning rate 0.5000 step-time 0.40 perplexity 157.48 
+  eval: bucket 0 perplexity 49.94 
+  eval: bucket 1 perplexity 39.70 
+  eval: bucket 2 perplexity 120.38 
+  eval: bucket 3 perplexity 154.40 
+global step 2500 learning rate 0.5000 step-time 0.41 perplexity 119.79 
