@@ -12,12 +12,6 @@ This repository is being developed as part of the course  Speech and Speaker Rec
 | Diego Yus | [DYusL](https://github.com/DYusL)       |
 
 
-> **Note:**
-
-> - This repo in currently under development.
-> - The **final version** of it will be reached at the begining of **June 2017**.
-
-
 ----------
 
 
